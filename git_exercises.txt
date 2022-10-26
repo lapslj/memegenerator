@@ -1,0 +1,105 @@
+john-lapsleys-macbook-pro-2:Terminal John$ mkdir learn_git_again
+john-lapsleys-macbook-pro-2:Terminal John$ cd learn_git_again
+john-lapsleys-macbook-pro-2:learn_git_again John$ touch third.txt
+john-lapsleys-macbook-pro-2:learn_git_again John$ git init
+Initialized empty Git repository in /Users/John/Dropbox (Personal)/Personal/CC etc/Scripting/Terminal/learn_git_again/.git/
+john-lapsleys-macbook-pro-2:learn_git_again John$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	third.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+john-lapsleys-macbook-pro-2:learn_git_again John$ git add third.txt
+john-lapsleys-macbook-pro-2:learn_git_again John$ commit -m "adding third.txt"
+-bash: commit: command not found
+john-lapsleys-macbook-pro-2:learn_git_again John$ git commit -m "additing third.txt"
+[master (root-commit) 9a866eb] additing third.txt
+ Committer: John L <John@john-lapsleys-macbook-pro-2.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+john-lapsleys-macbook-pro-2:learn_git_again John$ git log
+commit 9a866eba67ce2390fc7222f53faec3bf5cc3f2fd (HEAD -> master)
+Author: John L <John@john-lapsleys-macbook-pro-2.local>
+Date:   Tue Oct 25 15:49:22 2022 -0400
+
+    additing third.txt
+john-lapsleys-macbook-pro-2:learn_git_again John$ touch fourth.txt
+john-lapsleys-macbook-pro-2:learn_git_again John$ ls
+fourth.txt	third.txt
+john-lapsleys-macbook-pro-2:learn_git_again John$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	fourth.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+john-lapsleys-macbook-pro-2:learn_git_again John$ git add fourth.txt
+john-lapsleys-macbook-pro-2:learn_git_again John$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   fourth.txt
+
+john-lapsleys-macbook-pro-2:learn_git_again John$ rm third.txt
+john-lapsleys-macbook-pro-2:learn_git_again John$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   fourth.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    third.txt
+
+john-lapsleys-macbook-pro-2:learn_git_again John$ git add third.txt
+john-lapsleys-macbook-pro-2:learn_git_again John$ git commit -m "adding fourth txt and removing third.txt"
+[master c437872] adding fourth txt and removing third.txt
+ Committer: John L <John@john-lapsleys-macbook-pro-2.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename third.txt => fourth.txt (100%)
+john-lapsleys-macbook-pro-2:learn_git_again John$ git log
+commit c437872bb8dcc0a6109437250666e8779db5a146 (HEAD -> master)
+Author: John L <John@john-lapsleys-macbook-pro-2.local>
+Date:   Tue Oct 25 15:50:16 2022 -0400
+
+    adding fourth txt and removing third.txt
+
+commit 9a866eba67ce2390fc7222f53faec3bf5cc3f2fd
+Author: John L <John@john-lapsleys-macbook-pro-2.local>
+Date:   Tue Oct 25 15:49:22 2022 -0400
+
+    additing third.txt

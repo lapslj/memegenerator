@@ -1,0 +1,56 @@
+body {
+    background-color: blanchedalmond;
+}
+
+.mBoxes {
+    display: inline-block;
+    width: 600px;
+    margin: 5px;
+}
+  
+img {
+    border-radius: 5%;
+}
+
+button {
+    flex: 1;
+    border: none;
+    background-color: khaki;
+    font-family: 'Courier';
+    position: relative;
+    bottom: 40px;
+    align: center;
+}
+
+input[type=submit] {
+    border: none;
+    background-color: khaki;
+    font-family: 'Courier';
+}
+
+  .top-text {
+    font-family: 'Impact';
+    color: #ffffff;
+    font-size: 30px;
+    position: relative;
+    top: 40px;
+    text-align:center;
+}
+
+.bottom-text {
+    font-family: 'Impact';
+    color: white;
+    font-size: 30px;
+    position: relative;
+    bottom: 40px;
+    text-align:center;
+}
+
+.headtainer {
+    font-family: 'Courier';
+    display: block;
+    background-color: coral;
+    border: 5px;
+    padding: 5px 5px 5px 20px;
+
+  }
